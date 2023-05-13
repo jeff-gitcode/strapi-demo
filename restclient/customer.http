@@ -5,3 +5,8 @@
 GET {{host}}/api/customers HTTP/1.1
 content-type: application/json
 Authorization: Bearer {{token}}
+
+### @name customers/1
+GET {{host}}/api/customers/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}

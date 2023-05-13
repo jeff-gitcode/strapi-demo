@@ -2,7 +2,10 @@
 
 # TechStack
 
+- [x] headless CMS
 - [x] strapi
+- [x] REST Api
+- [x] GraphQL
 - [x] restclient
 
 ```javascript
@@ -18,12 +21,23 @@ https://docs.strapi.io/dev-docs/quick-start#_1-install-strapi-and-create-a-new-p
 
 # api test
 
+# start strapi
+$ yarn develop
+
+# graphql plugin
+$ yarn add @strapi/plugin-graphql
+
+http://localhost:1337/graphql
+
 ```
 ## Strapi
 ![alt text](./doc/strapi-dashboard.jpg)
 
 ## Rest client
 ![alt text](./doc/api-test.jpg)
+
+## GraphQL
+![alt text](./doc/graphql-test.jpg)
 
 # 🚀 Getting started with Strapi
 
