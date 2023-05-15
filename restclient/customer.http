@@ -1,12 +1,43 @@
 @host = {{$dotenv API_URL}}
 @token={{$dotenv BEARER_TOKEN}}
 
-### @name customers
+### GET ALL customers
 GET {{host}}/api/customers HTTP/1.1
 content-type: application/json
 Authorization: Bearer {{token}}
 
-### @name customers/1
+### SEARCH customers/1
 GET {{host}}/api/customers/1 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+### CREATE
+POST {{host}}/api/customers HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "data":  {
+        "FirstName": "Test",
+        "LastName": "Test",
+        "Email": "test1@test.com"
+    }
+}
+
+### UPDATE customers/2
+PUT {{host}}/api/customers/2 HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "data":  {
+        "FirstName": "Test update",
+        "LastName": "Test",
+        "Email": "test1@test.com"
+    }
+}
+
+### DELETE customers/2
+DELETE {{host}}/api/customers/2 HTTP/1.1
 content-type: application/json
 Authorization: Bearer {{token}}

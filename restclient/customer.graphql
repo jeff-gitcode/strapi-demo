@@ -1,0 +1,81 @@
+query GetCustomers {
+    customers {
+        data {
+            id
+            attributes {
+                FirstName
+                LastName
+                Email
+                Password
+            }
+        }
+    }
+}
+
+query GetCustomerById {
+    customer(id: 1) {
+        data {
+            id
+            attributes {
+                FirstName
+                LastName
+                Email
+                Password
+            }
+        }
+    }
+}
+
+mutation CreateCustomer {
+    createCustomer(data: {
+        FirstName: "John"
+        LastName: "Doe"
+        Email: "test1@test.com"
+        Password: "test123"
+    }) {
+        data {
+            id
+            attributes {
+                FirstName
+                LastName
+                Email
+                Password
+            }
+        }
+    }
+}
+
+mutation UpdateCustomer {
+    updateCustomer(
+       id: 3
+       data: {
+        FirstName: "John Update"
+        LastName: "Doe"
+        Email: "test1@test.com"
+        Password: "test123"
+    }) {
+        data {
+            id
+            attributes {
+                FirstName
+                LastName
+                Email
+                Password
+            }
+        }
+    }
+}
+
+mutation DeleteCustomer{
+deleteCustomer(id: 3) {
+ data {
+  id
+  attributes {
+              FirstName
+              LastName
+              Email
+              Password
+						  }
+			} 
+	}  
+}

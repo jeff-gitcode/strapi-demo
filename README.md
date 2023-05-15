@@ -29,6 +29,8 @@ $ yarn add @strapi/plugin-graphql
 
 http://localhost:1337/graphql
 
+# admin: test@test.com / password: Test1234
+
 ```
 ## Strapi
 ![alt text](./doc/strapi-dashboard.jpg)
